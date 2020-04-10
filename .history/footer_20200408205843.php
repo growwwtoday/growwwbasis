@@ -1,7 +1,7 @@
 
 <?php wp_footer(); ?>
 <?php include('includes/panel.php')?>
-<?php growwwFooter()?>
-<?php growwwBranding();?>
+<?php spurtFooter()?>
+<?php spurtBranding();?>
 </body>
 </html>
