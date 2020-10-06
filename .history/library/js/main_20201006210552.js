@@ -14,9 +14,14 @@ $(document).ready(function() {
     if($(window).width() >= mq.lg) {
       $('body').removeClass('lock');
       $('.js-nav-toggle').removeClass('is-active');
-      $('.js-nav-bar__right').prepend($('.js-nav-bar__hoofdmenu'));
+      $('.js-main-nav').append($('.js-hoofdmenu'));
+      $('.js-top-bar-nav').append($('.js-topmenu'));
+      $('.js-top-bar-select').append($('.js-productmenu'));
+    // } else if($(window).width() < mq.lg && $(window).width() >= mq.sm) {
     }else {
-      $('.js-panel__inner').append($('.js-nav-bar__hoofdmenu'));
+      $('.js-panel-main-nav').append($('.js-hoofdmenu'));
+      $('.js-panel-second-nav').append($('.js-topmenu'));
+      $('.js-panel-select').append($('.js-productmenu'));
     }
   };
 
