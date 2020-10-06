@@ -58,6 +58,7 @@ function blueprint_scripts() {
 	wp_enqueue_script( 'blueprint-script', get_template_directory_uri() . '/library/dist/js/min/main.min.js', array(), '', true );
 	wp_enqueue_script( 'dotdot',  'https://cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/4.0.9/dotdotdot.js', array(), '', true );
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/library/fontawesome/css/all.min.css' );
+
 	wp_enqueue_script( 'Slick',  'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array(), '', true );
 
 }
