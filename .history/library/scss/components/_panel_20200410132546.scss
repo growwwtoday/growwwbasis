@@ -9,18 +9,17 @@
     transition: transform .3s ease;
     width: 100vw;
     z-index: 9000;
+    @include media-breakpoint-down(xs) {
+        height: calc( 100vh - 70px );
+        top: 70px;
+    }
+
     &__inner {
         max-height: 100%;
         overflow: auto;
         padding: 50px 0;
-        .nav-bar__hoofdmenu{
-            li{
-                a{
-                    color:white;
-                }
-                float:unset;
-                margin: 5px 0;
-            }
+        @include media-breakpoint-down(xs) {
+            padding: 80px 0 30px;
         }
     }
 }
