@@ -1,0 +1,38 @@
+.builder-slider{
+    &__slide{
+        height: 250px!important;
+        content:'';
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .slick-slide {
+        margin: 0 15px;
+    }
+    .slick-list {
+        margin: 0 -15px;
+    }
+    &__arrows{
+        position: absolute;
+        top: 50%;
+        width: calc(100% - 30px);
+        transform: translateY(-50%);
+        &--left, &--right{
+            height: 40px;
+            width: 40px;
+            background-color: $primary;
+            line-height: 40px;
+            text-align: center;
+            content:'';
+            z-index: 3;
+            position: absolute;
+            color:white;
+        }
+        &--left{
+            left: 0;
+        }
+        &--right{
+            right: 0;
+        }
+    }
+}
