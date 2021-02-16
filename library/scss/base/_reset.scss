@@ -1,0 +1,14 @@
+body{
+    &.lock{
+        overflow-x: hidden;
+    }
+
+}
+html, body{
+    overflow-x: hidden;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+ }
