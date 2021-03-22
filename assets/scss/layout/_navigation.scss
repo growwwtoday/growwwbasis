@@ -1,0 +1,56 @@
+.nav-toggle {
+    cursor: pointer;
+    float: right;
+    height: 40px;
+    margin-right: 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    display: none;
+    @include media-breakpoint-down(md){
+        display:block;
+    }
+    span {
+        background-color: $primary;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: background-color 0s ease .3s;
+        width: 40px;
+        &:before,
+        &:after {
+            background-color: $primary;
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            width: 100%;
+        }
+        &:before {
+            top: -10px;
+            transition: top .3s ease .3s, transform .3s ease;
+        }
+        &:after {
+            bottom: -10px;
+            transition: bottom .3s ease .3s, transform .3s ease;
+        }
+    }
+    &.is-active {
+        span {
+            background-color: rgba(0, 0, 0, 0);
+            &:before {
+                top: 0;
+                transform: rotate(45deg);
+                transition: top .3s ease, transform .3s ease .3s;
+            }
+            &:after {
+                bottom: 0;
+                transform: rotate(-45deg);
+                transition: bottom .3s ease, transform .3s ease .3s;
+            }
+        }
+    }
+}

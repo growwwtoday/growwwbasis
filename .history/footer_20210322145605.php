@@ -2,6 +2,6 @@
         <?php get_template_part( 'template-parts/layout/panel' ); ?>
         <?php wp_footer(); ?>
         <?php growwwFooter()?>
-        <?php growwwBranding();?>
+<?php growwwBranding();?>
     </body>
 </html>

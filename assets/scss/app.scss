@@ -1,0 +1,28 @@
+// --- UTILS
+@import "~bootstrap/scss/functions";
+@import "utils/functions";
+@import "utils/variables";
+@import "utils/mixins";
+
+// --- BOOTSTRAP
+@import "vendors/bootstrap";
+
+// --- BASE
+@import "base/reset";
+@import "base/type";
+
+// --- COMPONENTS
+@import "components/block";
+@import "components/buttons";
+
+// --- LAYOUT
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+@import "layout/panel";
+
+// --- PAGES
+@import "pages/home";
+
+// --- EXTRA
+@import '~@fancyapps/fancybox/dist/jquery.fancybox.css';
