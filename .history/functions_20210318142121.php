@@ -23,7 +23,7 @@ function blue_hoofdmenu() {
 	wp_nav_menu(array(
         'container' => false,
 		'menu' => 'hoofdmenu',
-		'menu_class' => 'nav-bar__menu d-lg-flex',
+		'menu_class' => 'nav-bar__menu',
 		'theme_location' => 'hoofdmenu',
 		'depth' => 2
 	));
@@ -55,13 +55,12 @@ function blue_content_width() {
 add_action( 'after_setup_theme', 'blue_content_width', 0 );
 
 function blue_scripts() {
-	// wp_deregister_script('jquery');
+	wp_deregister_script('jquery');
 	
 	wp_enqueue_style( 'blue-css', get_template_directory_uri() .  '/dist/css/app.css' );
 	wp_enqueue_script( 'blue-manifest', get_template_directory_uri() . '/dist/js/manifest.js', array(), '', true );
 	wp_enqueue_script( 'blue-vendor', get_template_directory_uri() . '/dist/js/vendor.js', array(), '', true );
 	wp_enqueue_script( 'blue-app', get_template_directory_uri() . '/dist/js/app.js', array(), '', true );
-	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/fontawesome/css/all.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'blue_scripts' );
 
@@ -81,5 +80,3 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 }
-
-include( plugin_dir_path( __FILE__ ) . 'growww-plugin/forms.php');

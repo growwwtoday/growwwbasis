@@ -23,7 +23,7 @@ function blue_hoofdmenu() {
 	wp_nav_menu(array(
         'container' => false,
 		'menu' => 'hoofdmenu',
-		'menu_class' => 'nav-bar__menu d-lg-flex',
+		'menu_class' => 'nav-bar__menu',
 		'theme_location' => 'hoofdmenu',
 		'depth' => 2
 	));

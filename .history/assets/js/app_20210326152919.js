@@ -35,6 +35,24 @@ $(window).on('resize', function () {
     replaceMenu();
 });
 
+$(document).on('ready', function(){
+$('.js-slider-full').slick({
+    infinite: true,
+    slidesToScroll: 1,
+    variableWidth: true,
+    rows: 0,
+    arrows: false,
+    dots: false,
+    }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    var count = $('.js-home-hero-count');
+    count.addClass('changing');
+    setTimeout(function () {
+        count.html(nextSlide + 1);
+        count.removeClass('changing');
+        $('.js-slider-line').attr('data-number', nextSlide + 1);
+    }, 500);
+});
+
 
 
 })(jQuery);
