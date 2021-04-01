@@ -32,3 +32,6 @@ replaceMenu();
 $(window).on('resize', function () {
     replaceMenu();
 });
+
+
+})(jQuery);

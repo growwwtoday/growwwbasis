@@ -3,6 +3,7 @@ window.$ = window.jQuery = jQuery;
 import 'slick-slider';
 import '@fancyapps/fancybox';
 
+(function( $ ) {
 
 const mq = {
     "sm": 576,
@@ -10,6 +11,7 @@ const mq = {
     "lg": 992,
     "xl": 1200
 };
+
 
 $(document).on('click', '.js-nav-toggle', function (e) {
     e.preventDefault();
@@ -32,3 +34,7 @@ replaceMenu();
 $(window).on('resize', function () {
     replaceMenu();
 });
+
+
+
+})(jQuery);
